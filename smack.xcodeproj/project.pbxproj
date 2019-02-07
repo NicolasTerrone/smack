@@ -13,6 +13,7 @@
 		FA13FE79220C4E6C00FD0B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA13FE77220C4E6C00FD0B9D /* Main.storyboard */; };
 		FA13FE7B220C4E7400FD0B9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA13FE7A220C4E7400FD0B9D /* Assets.xcassets */; };
 		FA13FE7E220C4E7400FD0B9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA13FE7C220C4E7400FD0B9D /* LaunchScreen.storyboard */; };
+		FA13FE89220CBC7500FD0B9D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FE88220CBC7500FD0B9D /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		FA13FE7A220C4E7400FD0B9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA13FE7D220C4E7400FD0B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA13FE7F220C4E7400FD0B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA13FE86220CBC7400FD0B9D /* smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "smack-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA13FE87220CBC7500FD0B9D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		FA13FE88220CBC7500FD0B9D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		FA13FE67220C4E6C00FD0B9D = {
 			isa = PBXGroup;
 			children = (
+				FA13FE85220CBC3A00FD0B9D /* Supporting Files */,
 				FA13FE72220C4E6C00FD0B9D /* smack */,
 				FA13FE71220C4E6C00FD0B9D /* Products */,
 				B0FF9A21842D0EAFE75AD68E /* Pods */,
@@ -86,6 +91,16 @@
 				FA13FE7F220C4E7400FD0B9D /* Info.plist */,
 			);
 			path = smack;
+			sourceTree = "<group>";
+		};
+		FA13FE85220CBC3A00FD0B9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA13FE87220CBC7500FD0B9D /* SWRevealViewController.h */,
+				FA13FE88220CBC7500FD0B9D /* SWRevealViewController.m */,
+				FA13FE86220CBC7400FD0B9D /* smack-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +137,7 @@
 				TargetAttributes = {
 					FA13FE6F220C4E6C00FD0B9D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -208,6 +224,7 @@
 			files = (
 				FA13FE76220C4E6C00FD0B9D /* ViewController.swift in Sources */,
 				FA13FE74220C4E6C00FD0B9D /* AppDelegate.swift in Sources */,
+				FA13FE89220CBC7500FD0B9D /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +371,7 @@
 			baseConfigurationReference = B4AD8DF2C63CB0759845C601 /* Pods-smack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MBUSX683PQ;
 				INFOPLIST_FILE = smack/Info.plist;
@@ -363,6 +381,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.nicolasterrone.smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/smack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,6 +393,7 @@
 			baseConfigurationReference = 751168DC8E041900EB6E6D27 /* Pods-smack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MBUSX683PQ;
 				INFOPLIST_FILE = smack/Info.plist;
@@ -382,6 +403,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.nicolasterrone.smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/smack-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
