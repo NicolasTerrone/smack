@@ -19,6 +19,7 @@
 		FA91DEFF22119A3F00A43D2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DEFE22119A3F00A43D2A /* Constants.swift */; };
 		FA91DF0122119A6900A43D2A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DF0022119A6900A43D2A /* LoginVC.swift */; };
 		FA91DF032213653800A43D2A /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DF022213653800A43D2A /* CreateAccountVC.swift */; };
+		FA91DF0622180FED00A43D2A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DF0522180FED00A43D2A /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FA91DEFE22119A3F00A43D2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA91DF0022119A6900A43D2A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		FA91DF022213653800A43D2A /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		FA91DF0522180FED00A43D2A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		FA13FE72220C4E6C00FD0B9D /* smack */ = {
 			isa = PBXGroup;
 			children = (
+				FA91DF0422180FA600A43D2A /* Services */,
 				FA91DEFD22119A1D00A43D2A /* Utilities */,
 				FA13FE8C220EC6C600FD0B9D /* Model */,
 				FA13FE8B220EC6BF00FD0B9D /* View */,
@@ -148,6 +151,14 @@
 				FA91DEFE22119A3F00A43D2A /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FA91DF0422180FA600A43D2A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA91DF0522180FED00A43D2A /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +283,7 @@
 				FA13FE90220EC6FB00FD0B9D /* ChannelVC.swift in Sources */,
 				FA13FE8E220EC6DB00FD0B9D /* ChatVC.swift in Sources */,
 				FA91DF032213653800A43D2A /* CreateAccountVC.swift in Sources */,
+				FA91DF0622180FED00A43D2A /* AuthService.swift in Sources */,
 				FA91DF0122119A6900A43D2A /* LoginVC.swift in Sources */,
 				FA91DEFC22102B7900A43D2A /* GradientView.swift in Sources */,
 				FA13FE74220C4E6C00FD0B9D /* AppDelegate.swift in Sources */,
