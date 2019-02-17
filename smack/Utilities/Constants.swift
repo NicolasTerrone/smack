@@ -17,7 +17,7 @@ let USER_EMAIL = "userEmail"
 
 
 //URL
-let BASE_URL = "https://chattyappter.herokuapp.com/"
+let BASE_URL = "https://chattyappter.herokuapp.com/v1/"
 let REGISTER_URL = "\(BASE_URL)account/register"
 
 
