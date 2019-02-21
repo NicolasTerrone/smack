@@ -119,6 +119,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="xnl-PG-8Yj" id="FC9-ig-7Jc"/>
+                        <outlet property="userImg" destination="pvH-ca-0ye" id="h1o-EA-bKw"/>
                         <segue destination="rld-h9-evf" kind="show" identifier="toLogin" id="cu4-w6-j3i"/>
                     </connections>
                 </viewController>
@@ -375,7 +376,7 @@
                                     <action selector="generateBGColorPressed:" destination="WAD-DD-Nxz" eventType="touchUpInside" id="lUd-iX-pMl"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="28O-is-zk5">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="28O-is-zk5">
                                 <rect key="frame" x="169" y="604" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.25490196079999999" green="0.33333333329999998" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
