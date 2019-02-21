@@ -15,6 +15,11 @@ let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
+//COLORS
+let PURPLE_PLACEHOLDER = #colorLiteral(red: 0.2549019608, green: 0.3333333333, blue: 0.7803921569, alpha: 0.7)
+
+//NOTIFICATIONS_CONSTANTS
+let NOTIF_USER_DATA_CHANGED = Notification.Name("notifUserDataChanged")
 
 //URL
 let BASE_URL = "https://chattyappter.herokuapp.com/v1/"

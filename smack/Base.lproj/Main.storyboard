@@ -52,7 +52,7 @@
                                 <rect key="frame" x="281" y="88" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pvH-ca-0ye">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pvH-ca-0ye" customClass="CircleImage" customModule="smack" customModuleProvider="target">
                                 <rect key="frame" x="20" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="0MF-Zy-dFO"/>
@@ -238,6 +238,8 @@
                         <viewLayoutGuide key="safeArea" id="o6W-Dh-aCj"/>
                     </view>
                     <connections>
+                        <outlet property="passwordLbl" destination="Pf7-ok-klU" id="uOH-Od-xQ8"/>
+                        <outlet property="usernameLbl" destination="4WT-eA-QPD" id="7AA-Kc-F0f"/>
                         <segue destination="WAD-DD-Nxz" kind="show" identifier="toCreateAccount" id="V56-SA-xdw"/>
                     </connections>
                 </viewController>
@@ -356,7 +358,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="INM-yH-ciW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="INM-yH-ciW" customClass="CircleImage" customModule="smack" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="295.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="hN8-gG-gvN"/>
@@ -373,6 +375,11 @@
                                     <action selector="generateBGColorPressed:" destination="WAD-DD-Nxz" eventType="touchUpInside" id="lUd-iX-pMl"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="28O-is-zk5">
+                                <rect key="frame" x="169" y="604" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.25490196079999999" green="0.33333333329999998" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -395,6 +402,8 @@
                         <viewLayoutGuide key="safeArea" id="z2b-eq-8kD"/>
                     </view>
                     <connections>
+                        <outlet property="acitivityIndicator" destination="28O-is-zk5" id="ToZ-Ed-lg2"/>
+                        <outlet property="createAccountBtn" destination="yHl-q5-ORk" id="CVc-XY-tWO"/>
                         <outlet property="emailLbl" destination="lgP-GG-SyS" id="pxc-ov-cqh"/>
                         <outlet property="passwordLbl" destination="8RD-l3-UG6" id="BCN-Kk-t4S"/>
                         <outlet property="profileImg" destination="INM-yH-ciW" id="hLr-Nt-q5a"/>
