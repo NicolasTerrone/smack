@@ -158,6 +158,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="rld-h9-evf" eventType="touchUpInside" id="1bX-Qq-ANh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdu-nc-UFW">
                                 <rect key="frame" x="85" y="324" width="205" height="29"/>
@@ -222,10 +225,16 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1Sb-Br-f2E">
+                                <rect key="frame" x="169" y="280.5" width="37" height="37"/>
+                                <color key="color" red="0.20784313730000001" green="0.21960784310000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1Sb-Br-f2E" firstAttribute="centerY" secondItem="4FH-1V-oqO" secondAttribute="centerY" id="1yf-Av-bCM"/>
                             <constraint firstItem="NXz-tO-Taw" firstAttribute="top" secondItem="eiN-3E-Bvx" secondAttribute="bottom" constant="40" id="4oN-Ca-AFf"/>
+                            <constraint firstItem="1Sb-Br-f2E" firstAttribute="centerX" secondItem="BlB-L8-zQX" secondAttribute="centerX" id="8lw-Lc-0ow"/>
                             <constraint firstItem="Vdu-nc-UFW" firstAttribute="top" secondItem="4FH-1V-oqO" secondAttribute="bottom" id="DSb-My-NeO"/>
                             <constraint firstItem="eiN-3E-Bvx" firstAttribute="top" secondItem="o6W-Dh-aCj" secondAttribute="top" constant="40" id="F2s-4K-peh"/>
                             <constraint firstItem="4FH-1V-oqO" firstAttribute="top" secondItem="NXz-tO-Taw" secondAttribute="bottom" constant="40" id="Gvr-5C-Ai3"/>
@@ -239,6 +248,8 @@
                         <viewLayoutGuide key="safeArea" id="o6W-Dh-aCj"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="1Sb-Br-f2E" id="J0U-2r-iC7"/>
+                        <outlet property="loginBtn" destination="4FH-1V-oqO" id="NmD-Tk-Dhh"/>
                         <outlet property="passwordLbl" destination="Pf7-ok-klU" id="uOH-Od-xQ8"/>
                         <outlet property="usernameLbl" destination="4WT-eA-QPD" id="7AA-Kc-F0f"/>
                         <segue destination="WAD-DD-Nxz" kind="show" identifier="toCreateAccount" id="V56-SA-xdw"/>
@@ -376,9 +387,8 @@
                                     <action selector="generateBGColorPressed:" destination="WAD-DD-Nxz" eventType="touchUpInside" id="lUd-iX-pMl"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="28O-is-zk5">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="28O-is-zk5">
                                 <rect key="frame" x="169" y="604" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.25490196079999999" green="0.33333333329999998" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -387,6 +397,7 @@
                             <constraint firstItem="yHl-q5-ORk" firstAttribute="centerX" secondItem="z1j-fG-Xbw" secondAttribute="centerX" id="0LH-Nu-o16"/>
                             <constraint firstItem="6jF-bp-JC2" firstAttribute="top" secondItem="SY6-Aw-fc8" secondAttribute="bottom" constant="4" id="IgJ-dq-FnP"/>
                             <constraint firstItem="SY6-Aw-fc8" firstAttribute="top" secondItem="INM-yH-ciW" secondAttribute="top" id="LQB-2b-gmD"/>
+                            <constraint firstItem="28O-is-zk5" firstAttribute="centerY" secondItem="yHl-q5-ORk" secondAttribute="centerY" id="NBz-aP-80e"/>
                             <constraint firstItem="INM-yH-ciW" firstAttribute="top" secondItem="SIv-bH-vSq" secondAttribute="bottom" constant="20" id="NDb-W2-vfj"/>
                             <constraint firstItem="z2b-eq-8kD" firstAttribute="trailing" secondItem="CjT-kA-c64" secondAttribute="trailing" constant="20" id="UDf-M6-qol"/>
                             <constraint firstItem="INM-yH-ciW" firstAttribute="centerX" secondItem="z1j-fG-Xbw" secondAttribute="centerX" id="Xrd-mD-88t"/>
@@ -396,6 +407,7 @@
                             <constraint firstItem="zB6-MD-p2Y" firstAttribute="centerX" secondItem="z1j-fG-Xbw" secondAttribute="centerX" id="g1h-6p-Iqt"/>
                             <constraint firstItem="z2b-eq-8kD" firstAttribute="bottom" secondItem="yHl-q5-ORk" secondAttribute="bottom" constant="20" id="g8f-JW-t7Y"/>
                             <constraint firstItem="SY6-Aw-fc8" firstAttribute="centerX" secondItem="z1j-fG-Xbw" secondAttribute="centerX" id="jmL-7i-ePy"/>
+                            <constraint firstItem="28O-is-zk5" firstAttribute="centerX" secondItem="yHl-q5-ORk" secondAttribute="centerX" id="ldx-WO-0rT"/>
                             <constraint firstItem="CjT-kA-c64" firstAttribute="top" secondItem="z2b-eq-8kD" secondAttribute="top" constant="8" id="njp-E9-7iJ"/>
                             <constraint firstItem="SY6-Aw-fc8" firstAttribute="width" secondItem="INM-yH-ciW" secondAttribute="width" id="sZt-cf-3cU"/>
                             <constraint firstItem="SIv-bH-vSq" firstAttribute="top" secondItem="zB6-MD-p2Y" secondAttribute="bottom" constant="40" id="zPk-0m-rC8"/>

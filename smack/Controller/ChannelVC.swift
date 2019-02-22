@@ -20,6 +20,10 @@ class ChannelVC: UIViewController {
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataChanged), name: NOTIF_USER_DATA_CHANGED, object: nil)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        updateUserInfo()
+    }
  
     @IBAction func loginBtnPressed(_ sender: Any) {
         if AuthService.instance.isLogged {
@@ -34,6 +38,10 @@ class ChannelVC: UIViewController {
     @IBAction func prepareforUnwind(segue: UIStoryboardSegue){}
     
     @objc func userDataChanged(){
+        updateUserInfo()
+    }
+    
+    func updateUserInfo(){
         if AuthService.instance.isLogged {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
