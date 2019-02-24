@@ -15,6 +15,8 @@
 		FA13FE89220CBC7500FD0B9D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FE88220CBC7500FD0B9D /* SWRevealViewController.m */; };
 		FA13FE8E220EC6DB00FD0B9D /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13FE8D220EC6DB00FD0B9D /* ChatVC.swift */; };
 		FA13FE90220EC6FB00FD0B9D /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13FE8F220EC6FB00FD0B9D /* ChannelVC.swift */; };
+		FA66CB342222A36D00E37D41 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66CB332222A36D00E37D41 /* Channel.swift */; };
+		FA66CB362222A75500E37D41 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66CB352222A75500E37D41 /* MessageService.swift */; };
 		FA91DEFC22102B7900A43D2A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DEFB22102B7900A43D2A /* GradientView.swift */; };
 		FA91DEFF22119A3F00A43D2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DEFE22119A3F00A43D2A /* Constants.swift */; };
 		FA91DF0122119A6900A43D2A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DF0022119A6900A43D2A /* LoginVC.swift */; };
@@ -44,6 +46,8 @@
 		FA13FE88220CBC7500FD0B9D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FA13FE8D220EC6DB00FD0B9D /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		FA13FE8F220EC6FB00FD0B9D /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		FA66CB332222A36D00E37D41 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		FA66CB352222A75500E37D41 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		FA91DEFB22102B7900A43D2A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FA91DEFE22119A3F00A43D2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA91DF0022119A6900A43D2A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		FA13FE8C220EC6C600FD0B9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA66CB332222A36D00E37D41 /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			children = (
 				FA91DF0522180FED00A43D2A /* AuthService.swift */,
 				FA91DF09221B447900A43D2A /* UserDataService.swift */,
+				FA66CB352222A75500E37D41 /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -311,10 +317,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA91DF13221EB44300A43D2A /* ProfileVC.swift in Sources */,
+				FA66CB342222A36D00E37D41 /* Channel.swift in Sources */,
 				FA13FE90220EC6FB00FD0B9D /* ChannelVC.swift in Sources */,
 				FA91DF0C221C25DC00A43D2A /* AvatarPickerVC.swift in Sources */,
 				FA91DF0822195DBD00A43D2A /* RoundedButton.swift in Sources */,
 				FA91DF10221E8EC200A43D2A /* CircleImage.swift in Sources */,
+				FA66CB362222A75500E37D41 /* MessageService.swift in Sources */,
 				FA13FE8E220EC6DB00FD0B9D /* ChatVC.swift in Sources */,
 				FA91DF0A221B447900A43D2A /* UserDataService.swift in Sources */,
 				FA91DF032213653800A43D2A /* CreateAccountVC.swift in Sources */,
