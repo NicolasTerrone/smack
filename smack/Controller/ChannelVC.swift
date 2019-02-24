@@ -38,6 +38,17 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }
     }
     
+    @IBAction func addChannelBtnPressed(_ sender: Any) {
+        if AuthService.instance.isLogged {
+            let addChannel = AddChannelVC()
+            addChannel.modalPresentationStyle = .custom
+            present(addChannel, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
+    }
+    
+    
     @IBAction func prepareforUnwind(segue: UIStoryboardSegue){}
     
     @objc func userDataChanged(){
