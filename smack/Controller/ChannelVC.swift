@@ -22,6 +22,11 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         tableView.dataSource = self
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataChanged), name: NOTIF_USER_DATA_CHANGED, object: nil)
+        SocketService.instance.getChannel { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,6 +70,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
         }
+        self.tableView.reloadData()
     }
     
     //TABLEVIEW

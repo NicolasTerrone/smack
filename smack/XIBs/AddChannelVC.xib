@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="bgView" destination="KA1-jP-z2H" id="WcQ-pg-8XW"/>
                 <outlet property="descTxt" destination="hFZ-tE-Tq7" id="Qrc-Wh-hm2"/>
+                <outlet property="formView" destination="Iey-jc-Sy0" id="D2Y-hl-XJH"/>
                 <outlet property="nameTxt" destination="4vL-cC-rMs" id="Lu6-Hp-lud"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

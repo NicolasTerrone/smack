@@ -22,6 +22,7 @@ class MessageService {
                 guard let data = response.data else { return }
                 do {
                     self.channels = try JSONDecoder().decode([Channel].self, from: data)
+                    print(self.channels)
                 } catch let error {
                     debugPrint(error as Any)
                 }

@@ -13,6 +13,7 @@ class AddChannelVC: UIViewController {
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var descTxt: UITextField!
     @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var formView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,18 @@ class AddChannelVC: UIViewController {
     func setupView(){
         nameTxt.attributedPlaceholder = NSAttributedString(string: "name", attributes: [NSAttributedString.Key.foregroundColor : PURPLE_PLACEHOLDER])
         descTxt.attributedPlaceholder = NSAttributedString(string: "description", attributes: [NSAttributedString.Key.foregroundColor : PURPLE_PLACEHOLDER])
-        let closeTap = UIGestureRecognizer(target: self, action: #selector(AddChannelVC.handTap))
+        let closeTap = UITapGestureRecognizer(target: self, action: #selector(AddChannelVC.handTap))
         bgView.addGestureRecognizer(closeTap)
+        let closeKeyBoard = UITapGestureRecognizer(target: self, action: #selector(AddChannelVC.endEdit))
+        formView.addGestureRecognizer(closeKeyBoard)
     }
     
     @objc func handTap(){
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func endEdit(){
+        formView.endEditing(true)
     }
     
     //IBACTION
@@ -38,7 +45,13 @@ class AddChannelVC: UIViewController {
     }
     
     @IBAction func createChannelPressed(_ sender: Any) {
-        
+        guard let name = nameTxt.text, nameTxt.text != "" else { return  }
+        guard let description = descTxt.text, descTxt.text != "" else { return }
+        SocketService.instance.addChannel(channelName: name, channelDescription: description) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     
