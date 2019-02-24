@@ -59,7 +59,7 @@ class LoginVC: UIViewController {
     func setupView(){
         activityIndicator.isHidden = true
         
-        usernameLbl.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor : PURPLE_PLACEHOLDER])
+        usernameLbl.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor : PURPLE_PLACEHOLDER])
         passwordLbl.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor : PURPLE_PLACEHOLDER])
         
     }

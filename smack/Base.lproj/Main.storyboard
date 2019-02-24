@@ -74,7 +74,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SKo-MT-bgR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="SKo-MT-bgR" customClass="ChannelCell" customModule="smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SKo-MT-bgR" id="PY4-pa-SbD">
@@ -94,6 +94,10 @@
                                                 <constraint firstItem="gCA-8a-s55" firstAttribute="leading" secondItem="PY4-pa-SbD" secondAttribute="leading" constant="20" id="wCz-8t-nQl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="titleLbl" destination="gCA-8a-s55" id="GhZ-2H-kfd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -119,6 +123,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="xnl-PG-8Yj" id="FC9-ig-7Jc"/>
+                        <outlet property="tableView" destination="7UC-Iz-0x1" id="aJw-kW-5l8"/>
                         <outlet property="userImg" destination="pvH-ca-0ye" id="h1o-EA-bKw"/>
                         <segue destination="rld-h9-evf" kind="show" identifier="toLogin" id="cu4-w6-j3i"/>
                     </connections>
@@ -388,7 +393,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="28O-is-zk5">
-                                <rect key="frame" x="169" y="604" width="37" height="37"/>
+                                <rect key="frame" x="169" y="603.5" width="37" height="37"/>
                                 <color key="color" red="0.25490196079999999" green="0.33333333329999998" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
