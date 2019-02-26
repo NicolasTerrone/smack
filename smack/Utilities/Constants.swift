@@ -19,7 +19,9 @@ let USER_EMAIL = "userEmail"
 let PURPLE_PLACEHOLDER = #colorLiteral(red: 0.2549019608, green: 0.3333333333, blue: 0.7803921569, alpha: 0.7)
 
 //NOTIFICATIONS_CONSTANTS
-let NOTIF_USER_DATA_CHANGED = Notification.Name("notifUserDataChanged")
+let NOTIF_USER_DATA_CHANGED = Notification.Name("userDataChanged")
+let NOTIF_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIF_CHANNEL_SELECTED = Notification.Name("channelSelected")
 
 //URL
 let BASE_URL = "https://chattyappter.herokuapp.com/v1/"
