@@ -21,6 +21,7 @@
 		FA66CB3B2222CE5C00E37D41 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66CB392222CE5C00E37D41 /* AddChannelVC.swift */; };
 		FA66CB3C2222CE5C00E37D41 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA66CB3A2222CE5C00E37D41 /* AddChannelVC.xib */; };
 		FA66CB3E22230C9900E37D41 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66CB3D22230C9900E37D41 /* SocketService.swift */; };
+		FA66CB4022271F8900E37D41 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66CB3F22271F8900E37D41 /* Message.swift */; };
 		FA91DEFC22102B7900A43D2A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DEFB22102B7900A43D2A /* GradientView.swift */; };
 		FA91DEFF22119A3F00A43D2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DEFE22119A3F00A43D2A /* Constants.swift */; };
 		FA91DF0122119A6900A43D2A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DF0022119A6900A43D2A /* LoginVC.swift */; };
@@ -56,6 +57,7 @@
 		FA66CB392222CE5C00E37D41 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		FA66CB3A2222CE5C00E37D41 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		FA66CB3D22230C9900E37D41 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		FA66CB3F22271F8900E37D41 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		FA91DEFB22102B7900A43D2A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FA91DEFE22119A3F00A43D2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA91DF0022119A6900A43D2A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				FA66CB332222A36D00E37D41 /* Channel.swift */,
+				FA66CB3F22271F8900E37D41 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				FA66CB342222A36D00E37D41 /* Channel.swift in Sources */,
 				FA13FE90220EC6FB00FD0B9D /* ChannelVC.swift in Sources */,
 				FA91DF0C221C25DC00A43D2A /* AvatarPickerVC.swift in Sources */,
+				FA66CB4022271F8900E37D41 /* Message.swift in Sources */,
 				FA91DF0822195DBD00A43D2A /* RoundedButton.swift in Sources */,
 				FA91DF10221E8EC200A43D2A /* CircleImage.swift in Sources */,
 				FA66CB362222A75500E37D41 /* MessageService.swift in Sources */,

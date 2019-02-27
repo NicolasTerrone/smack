@@ -30,6 +30,7 @@ let LOGIN_URL = "\(BASE_URL)account/login"
 let ADD_USER_URL = "\(BASE_URL)user/add"
 let USER_BY_EMAIL_URL = "\(BASE_URL)user/byEmail/"
 let ALL_CHANNEL_URL = "\(BASE_URL)channel"
+let MESSAGE_BY_CHANNEL_URL = "\(BASE_URL)message/byChannel/"
 
 
 // Segues
