@@ -14,6 +14,7 @@ class ChatVC: UIViewController {
     
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var channelNameLbl: UILabel!
+    @IBOutlet weak var messageTxtField: UITextField!
     
     
     override func viewDidLoad() {
@@ -75,5 +76,22 @@ class ChatVC: UIViewController {
             
         }
     }
+    
+    func setupView() {
+        messageTxtField.attributedPlaceholder = NSAttributedString(string: "Message: ", attributes: [NSAttributedString.Key.foregroundColor : PURPLE_PLACEHOLDER])
+    }
 
+    @IBAction func sendBtnPressed(_ sender: Any) {
+        if AuthService.instance.isLogged {
+            guard let channelID = MessageService.instance.selectedChannel?._id else { return }
+            guard let messageBody = messageTxtField.text else { return }
+            SocketService.instance.addMessage(messageBody: messageBody, userID: UserDataService.instance.id, channelID: channelID) { (success) in
+                if success {
+                    self.messageTxtField.text = ""
+                    self.messageTxtField.resignFirstResponder()
+                }
+            }
+        }
+    }
+    
 }

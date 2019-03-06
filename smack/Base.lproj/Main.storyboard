@@ -563,18 +563,44 @@
                                     <constraint firstAttribute="height" constant="77" id="z85-kw-dnw"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNj-gk-Njc">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="96k-nR-JYb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uM-JC-onN">
+                                <rect key="frame" x="337" y="632" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="WeE-vB-Bfv"/>
+                                    <constraint firstAttribute="height" constant="30" id="uVk-LU-QDf"/>
+                                </constraints>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="sendBtnPressed:" destination="TrK-Da-hrI" eventType="touchUpInside" id="c2e-Ii-NfZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nYr-sJ-7LF" firstAttribute="trailing" secondItem="gNj-gk-Njc" secondAttribute="trailing" id="5Bt-U2-U1M"/>
+                            <constraint firstItem="5uM-JC-onN" firstAttribute="centerY" secondItem="gNj-gk-Njc" secondAttribute="centerY" id="8ES-PM-lPt"/>
                             <constraint firstItem="nYr-sJ-7LF" firstAttribute="trailing" secondItem="Luf-IX-7Cg" secondAttribute="trailing" id="JX0-Dh-iuM"/>
+                            <constraint firstItem="nYr-sJ-7LF" firstAttribute="trailing" secondItem="5uM-JC-onN" secondAttribute="trailing" constant="8" id="VxX-UO-uD9"/>
                             <constraint firstItem="Luf-IX-7Cg" firstAttribute="top" secondItem="nYr-sJ-7LF" secondAttribute="top" id="ZJ6-F5-4g1"/>
+                            <constraint firstItem="gNj-gk-Njc" firstAttribute="leading" secondItem="nYr-sJ-7LF" secondAttribute="leading" id="bFd-Ed-jRi"/>
                             <constraint firstItem="Luf-IX-7Cg" firstAttribute="leading" secondItem="nYr-sJ-7LF" secondAttribute="leading" id="c1n-ux-c2n"/>
+                            <constraint firstItem="gNj-gk-Njc" firstAttribute="bottom" secondItem="nYr-sJ-7LF" secondAttribute="bottom" id="tb9-fm-wzW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nYr-sJ-7LF"/>
                     </view>
                     <connections>
                         <outlet property="channelNameLbl" destination="Cst-oa-DPy" id="wJl-Kc-FDj"/>
                         <outlet property="menuBtn" destination="t3s-3Y-7Zf" id="0Lt-8C-yMj"/>
+                        <outlet property="messageTxtField" destination="gNj-gk-Njc" id="7sW-8c-2wf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmz-ux-J4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -587,6 +613,7 @@
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>
+        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>
