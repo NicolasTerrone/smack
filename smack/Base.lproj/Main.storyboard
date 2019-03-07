@@ -583,7 +583,7 @@
                                     <action selector="sendBtnPressed:" destination="TrK-Da-hrI" eventType="touchUpInside" id="c2e-Ii-NfZ"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iph-Cw-OcJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iph-Cw-OcJ">
                                 <rect key="frame" x="0.0" y="97" width="375" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -591,7 +591,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SWB-Ea-KFf" id="cBq-hk-8TT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="fhI-hX-qXx" customClass="CircleImage" customModule="smack" customModuleProvider="target">
@@ -664,6 +664,7 @@
                         <outlet property="channelNameLbl" destination="Cst-oa-DPy" id="wJl-Kc-FDj"/>
                         <outlet property="menuBtn" destination="t3s-3Y-7Zf" id="0Lt-8C-yMj"/>
                         <outlet property="messageTxtField" destination="gNj-gk-Njc" id="7sW-8c-2wf"/>
+                        <outlet property="msgBoxBottomConstraint" destination="tb9-fm-wzW" id="6wu-de-Tqa"/>
                         <outlet property="tableView" destination="Iph-Cw-OcJ" id="AAd-Rl-dgh"/>
                     </connections>
                 </viewController>

@@ -16,6 +16,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var channelNameLbl: UILabel!
     @IBOutlet weak var messageTxtField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var msgBoxBottomConstraint: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
@@ -26,6 +27,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
+        
+        //KEYBOARD
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
+        view.addGestureRecognizer(tap)
+        
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -117,7 +125,33 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     self.messageTxtField.resignFirstResponder()
                 }
             }
+        } else {
+            performSegue(withIdentifier: LOGIN_URL, sender: nil)
         }
     }
     
+    
+    //KEYBOARD HANDLE
+    
+    @objc func keyboardWillShow(notification: NSNotification){
+        if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            self.msgBoxBottomConstraint.constant = -keyboardHeight
+            UIView.animate(withDuration: 0.2, delay: 0, options: .transitionCurlDown, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification){
+        self.msgBoxBottomConstraint.constant = 0
+        UIView.animate(withDuration: 0.2, delay: 0, options: .transitionCurlDown, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
 }
