@@ -571,6 +571,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="msgBoxEditing:" destination="TrK-Da-hrI" eventType="editingChanged" id="VVq-2H-c98"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uM-JC-onN">
                                 <rect key="frame" x="337" y="632" width="30" height="30"/>
@@ -665,12 +668,13 @@
                         <outlet property="menuBtn" destination="t3s-3Y-7Zf" id="0Lt-8C-yMj"/>
                         <outlet property="messageTxtField" destination="gNj-gk-Njc" id="7sW-8c-2wf"/>
                         <outlet property="msgBoxBottomConstraint" destination="tb9-fm-wzW" id="6wu-de-Tqa"/>
+                        <outlet property="sendBtn" destination="5uM-JC-onN" id="XYx-H3-ilk"/>
                         <outlet property="tableView" destination="Iph-Cw-OcJ" id="AAd-Rl-dgh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmz-ux-J4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="421"/>
+            <point key="canvasLocation" x="1561" y="410"/>
         </scene>
     </scenes>
     <resources>

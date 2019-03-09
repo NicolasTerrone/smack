@@ -17,7 +17,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var messageTxtField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var msgBoxBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var sendBtn: UIButton!
     
+    //Variables
+    var isTyping = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +31,21 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
         
+        sendBtn.isHidden = true
+        
         //KEYBOARD
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
         view.addGestureRecognizer(tap)
         
+        //SOCKETS
+        SocketService.instance.getMessageByChannel { (success) in
+            if success {
+                self.tableView.reloadData()
+                self.scrollTable()
+            }
+        }
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -58,6 +70,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             onLoginGetMessages()
         } else {
             channelNameLbl.text = "Please Log In"
+            self.tableView.reloadData()
         }
     }
     
@@ -87,7 +100,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func getMessages(){
         guard let channelId = MessageService.instance.selectedChannel?._id else { return }
         MessageService.instance.findAllMessageForChannel(channelId: channelId) { (success) in
-            
+            if success {
+                self.tableView.reloadData()
+                self.scrollTable()
+            }
         }
     }
     
@@ -125,11 +141,18 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     self.messageTxtField.resignFirstResponder()
                 }
             }
-        } else {
-            performSegue(withIdentifier: LOGIN_URL, sender: nil)
         }
     }
     
+    @IBAction func msgBoxEditing(_ sender: Any) {
+        if messageTxtField.text != "" && AuthService.instance.isLogged {
+            sendBtn.isHidden = false
+            isTyping = true
+        } else {
+            sendBtn.isHidden = true
+            isTyping = false
+        }
+    }
     
     //KEYBOARD HANDLE
     
@@ -140,6 +163,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.msgBoxBottomConstraint.constant = -keyboardHeight
             UIView.animate(withDuration: 0.2, delay: 0, options: .transitionCurlDown, animations: {
                 self.view.layoutIfNeeded()
+                self.scrollTable()
             }, completion: nil)
         }
     }
@@ -153,5 +177,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc func handleTap() {
         view.endEditing(true)
+    }
+    
+    //Utilities
+    func scrollTable(){
+        if MessageService.instance.messages.count > 0 {
+            let indexEnd = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+            self.tableView.scrollToRow(at: indexEnd, at: UITableView.ScrollPosition.bottom, animated: false)
+        }
     }
 }
