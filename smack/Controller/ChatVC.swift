@@ -41,8 +41,9 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         view.addGestureRecognizer(tap)
         
         //SOCKETS
-        SocketService.instance.getMessageByChannel { (success) in
-            if success {
+        SocketService.instance.getMessageByChannel { (newMessage) in
+            if newMessage.channelId == MessageService.instance.selectedChannel?._id && AuthService.instance.isLogged {
+                MessageService.instance.messages.append(newMessage)
                 self.tableView.reloadData()
                 self.scrollTable()
             }
@@ -65,7 +66,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             
             if numberOfTypers > 0 && AuthService.instance.isLogged {
-                var verb = numberOfTypers > 1 ? "are" : "is"
+                let verb = numberOfTypers > 1 ? "are" : "is"
                 self.userTypingLbl.text = "\(names) \(verb) typing..."
             } else {
                 self.userTypingLbl.text = ""
