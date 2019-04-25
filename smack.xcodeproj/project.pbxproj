@@ -23,6 +23,8 @@
 		FA66CB3C2222CE5C00E37D41 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA66CB3A2222CE5C00E37D41 /* AddChannelVC.xib */; };
 		FA66CB3E22230C9900E37D41 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66CB3D22230C9900E37D41 /* SocketService.swift */; };
 		FA66CB4022271F8900E37D41 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA66CB3F22271F8900E37D41 /* Message.swift */; };
+		FA72A9EE2271C5BF002BFEEA /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72A9EC2271C5BF002BFEEA /* EditProfileVC.swift */; };
+		FA72A9EF2271C5BF002BFEEA /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA72A9ED2271C5BF002BFEEA /* EditProfileVC.xib */; };
 		FA91DEFC22102B7900A43D2A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DEFB22102B7900A43D2A /* GradientView.swift */; };
 		FA91DEFF22119A3F00A43D2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DEFE22119A3F00A43D2A /* Constants.swift */; };
 		FA91DF0122119A6900A43D2A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91DF0022119A6900A43D2A /* LoginVC.swift */; };
@@ -60,6 +62,8 @@
 		FA66CB3A2222CE5C00E37D41 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		FA66CB3D22230C9900E37D41 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		FA66CB3F22271F8900E37D41 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		FA72A9EC2271C5BF002BFEEA /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		FA72A9ED2271C5BF002BFEEA /* EditProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileVC.xib; sourceTree = "<group>"; };
 		FA91DEFB22102B7900A43D2A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FA91DEFE22119A3F00A43D2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA91DF0022119A6900A43D2A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				FA91DF0B221C25DC00A43D2A /* AvatarPickerVC.swift */,
 				FA91DF11221EB44300A43D2A /* ProfileVC.swift */,
 				FA66CB392222CE5C00E37D41 /* AddChannelVC.swift */,
+				FA72A9EC2271C5BF002BFEEA /* EditProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			children = (
 				FA91DF12221EB44300A43D2A /* ProfileVC.xib */,
 				FA66CB3A2222CE5C00E37D41 /* AddChannelVC.xib */,
+				FA72A9ED2271C5BF002BFEEA /* EditProfileVC.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 			files = (
 				FA66CB3C2222CE5C00E37D41 /* AddChannelVC.xib in Resources */,
 				FA91DF14221EB44300A43D2A /* ProfileVC.xib in Resources */,
+				FA72A9EF2271C5BF002BFEEA /* EditProfileVC.xib in Resources */,
 				FA13FE7E220C4E7400FD0B9D /* LaunchScreen.storyboard in Resources */,
 				FA13FE7B220C4E7400FD0B9D /* Assets.xcassets in Resources */,
 				FA13FE79220C4E6C00FD0B9D /* Main.storyboard in Resources */,
@@ -342,6 +349,7 @@
 				FA13FE90220EC6FB00FD0B9D /* ChannelVC.swift in Sources */,
 				FA91DF0C221C25DC00A43D2A /* AvatarPickerVC.swift in Sources */,
 				FA66CB4022271F8900E37D41 /* Message.swift in Sources */,
+				FA72A9EE2271C5BF002BFEEA /* EditProfileVC.swift in Sources */,
 				FA91DF0822195DBD00A43D2A /* RoundedButton.swift in Sources */,
 				FA91DF10221E8EC200A43D2A /* CircleImage.swift in Sources */,
 				FA66CB362222A75500E37D41 /* MessageService.swift in Sources */,
