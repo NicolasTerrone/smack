@@ -41,6 +41,12 @@ class EditProfileVC: UIViewController {
     }
     
     @IBAction func validateBtnPressed(_ sender: Any){
-        
+        guard let newName = userNameLbl.text else { return }
+        AuthService.instance.updateUser(name: newName) { (success) in
+            if success {
+                NotificationCenter.default.post(name: NOTIF_USER_DATA_CHANGED, object: nil)
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }

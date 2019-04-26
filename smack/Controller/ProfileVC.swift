@@ -32,6 +32,12 @@ class ProfileVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func editBtnPressed(_ sender: Any) {
+        let editProfile = EditProfileVC()
+        editProfile.modalPresentationStyle = .custom
+        present(editProfile, animated: true, completion: nil)
+    }
+    
     func setupView(){
         userImg.image = UIImage(named: UserDataService.instance.avatarName)
         userImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)

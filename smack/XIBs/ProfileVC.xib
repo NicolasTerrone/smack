@@ -111,6 +111,9 @@
                                             <real key="value" value="5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="editBtnPressed:" destination="-1" eventType="touchUpInside" id="MdT-WV-Nsn"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

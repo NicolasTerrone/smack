@@ -30,6 +30,10 @@ class UserDataService {
         self.avatarName = avatarName
     }
     
+    func setName(newName: String){
+        self.name = newName
+    }
+    
     func returnUIColor(components: String) -> UIColor{
         let scanner = Scanner(string: components)
         let skipped = CharacterSet(charactersIn: "[], ")
